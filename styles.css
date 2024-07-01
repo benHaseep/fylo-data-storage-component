@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: hsl(243, 100%, 93%);
+  font-family: "Raleway", sans-serif;
+  height: 100vh;
+  background-color: hsl(229, 57%, 11%);
+}
+
+.container {
+  background-image: url(images/bg-mobile.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 97vh;
+}
+
+.actions-box {
+  background-color: hsl(228, 56%, 26%);
+  width: 250px;
+  padding: 50px;
+  border-radius: 10px 100px 10px 10px;
+}
+
+.actions-box .actions {
+  margin-top: 30px;
+  display: flex;
+}
+
+.actions-box .actions .img {
+  background-color: hsl(229, 57%, 11%);
+  margin-right: 15px;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.actions-box .actions .img img {
+  vertical-align: middle;
+  margin: auto;
+}
+
+.stats-box {
+  background-color: hsl(228, 56%, 26%);
+  width: 310px;
+  padding: 30px 20px 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.stats-box .usage-msg span {
+  font-weight: 700;
+}
+
+.stats-box .bar {
+  width: 90%;
+  height: 15px;
+  background-color: hsl(229, 57%, 11%);
+  padding: 3px 0;
+  border-radius: 50px;
+  margin-top: 20px;
+
+}
+
+.stats-box .bar .progress {
+  width: 78%;
+  height: 100%;
+  background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 50px;
+  margin-left: 3px;
+}
+
+.stats-box .amounts {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.stats-box .amounts p {
+  font-weight: 700;
+}
+
+.remaining-msg {
+  background-color: #fff;
+  color: hsl(229, 7%, 55%);
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 170px;
+  font-weight: 600;
+  position: absolute;
+  top: 80%;
+  font-size: 14px;
+}
+
+.remaining-msg span {
+  font-size: 35px;
+  color: hsl(229, 57%, 11%);
+  font-weight: 700;
+}
+
+/* === Footer === */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* === Media Query === */
+@media (min-width: 767px) {
+  .container {
+    background-image: url(images/bg-desktop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 120%;
+    background-position-x: 50%;
+    flex-direction: row;
+    height: 90vh;
+    width: 100vw;
+  }
+
+  .stats-box {
+    width: 500px;
+    align-items: flex-start;
+    padding: 30px 20px 30px;
+    margin-top: 60px;
+  }
+
+  .remaining-msg {
+    z-index: 999;
+    width: 120px;
+    top: -50px;
+    left: 60%;
+    border-right: 20px solid #fff;
+    border-bottom: 20px solid hsl(228, 56%, 26%);
+    border-bottom-right-radius: 0;
+  }
+}
